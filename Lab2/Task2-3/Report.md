@@ -1,18 +1,19 @@
-**`Lab2/Task2-3/report.md`（完整示範報告）**
+**`Lab2/Task2-3/report.md`**
 
 ```markdown
-# 課題報告：Task 0-1 Hello World 序列埠輸出
+# 課題報告：Task 2-3 External Interrupt vs Polling
 
-- **學生姓名**：[請填寫姓名]
-- **學生學號**：[請填寫學號]
-- **完成日期**：2026-XX-XX
+- 學生姓名：黃家珮
+- 學生學號：113511008
+- 完成日期：2026-09-24
 
 ---
 
 ### 1. 實驗目標(可參考課程投影片寫法)
-- 驗證 Arduino IDE 開發環境編譯與燒錄功能正常。
-- 掌握 `Serial.begin()` 與 `Serial.println()` 之使用方式。
-- 學習透過 Arduino IDE「序列埠監控器（Serial Monitor）」接收開發板訊息。
+- 學習外部中斷（External Interrupt）與輪詢（Polling）之基本原理。
+- 了解不同事件偵測方式對系統反應速度的影響。
+- 實作按鈕控制 LED 開關功能，並比較中斷與輪詢機制之差異。
+- 驗證在系統忙碌或阻塞（Blocking）情況下，中斷與輪詢的行為表現。
 
 ### 2. 設備與元件
 - Arduino Uno 開發板 x 1

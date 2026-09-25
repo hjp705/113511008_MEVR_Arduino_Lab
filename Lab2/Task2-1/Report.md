@@ -1,26 +1,40 @@
-**`Lab2/Task2-1/report.md`（完整示範報告）**
+**`Lab2/Task2-1/report.md`**
 
 ```markdown
-# 課題報告：Task 0-1 Hello World 序列埠輸出
+# 課題報告：Task 2-1 Potentiometer Direction & Speed Control
 
-- **學生姓名**：[請填寫姓名]
-- **學生學號**：[請填寫學號]
-- **完成日期**：2026-XX-XX
+- 學生姓名：黃家珮
+- 學生學號：113511008
+- 完成日期：2026-09-24
 
 ---
 
 ### 1. 實驗目標(可參考課程投影片寫法)
-- 驗證 Arduino IDE 開發環境編譯與燒錄功能正常。
-- 掌握 `Serial.begin()` 與 `Serial.println()` 之使用方式。
-- 學習透過 Arduino IDE「序列埠監控器（Serial Monitor）」接收開發板訊息。
+- 學習使用可變電阻（Potentiometer）作為類比輸入元件。
+- 了解 Arduino 類比訊號讀取（Analog Input）與 PWM 控制方式。
+- 實作以可變電阻旋轉角度控制直流馬達之轉動方向與轉速。
+- 驗證馬達可依可變電阻位置進行順時針、逆時針旋轉及停止控制。
 
 ### 2. 設備與元件
-- Arduino Uno 開發板 x 1
-- USB Type-B 傳輸線 x 1
-- 個人電腦（已安裝 Arduino IDE）x 1
+- Arduino Uno 開發板 × 1
+- L293D 馬達驅動 IC × 1
+- 直流馬達（DC Motor）× 1
+- 可變電阻（Potentiometer）× 1
+- 麵包板（Breadboard）× 1
+- 跳線若干
+- USB Type-B 傳輸線 × 1
+- 個人電腦（已安裝 Arduino IDE）× 1
 
 ### 3. 操作說明與成果
-1. **燒錄程式**：使用 USB 線連接 Arduino Uno 至電腦，開啟 `Task0-1.ino` 並點擊「上傳」。
-2. **開啟監控器**：開啟 Arduino IDE 的 Serial Monitor，將鮑率（Baud rate）設為 **9600 baud**。
-3. **實驗成果**：序列埠監控器成功每秒印出一次 `Hello World from Arduino!` 訊息。
-4. **操作影片**：請參閱同目錄下 `video/Task0-1.mp4` 之實際操作畫面。
+1. 電路架設：依照前一個馬達控制實驗之接線方式完成 Arduino、L293D 與直流馬達連接，並新增可變電阻作為類比輸入元件。
+
+2. 燒錄程式：使用 USB 線連接 Arduino Uno 至電腦，開啟 Advanced2-1.ino 程式並點擊「上傳」完成燒錄。
+
+3. 功能測試：
+    - 將可變電阻旋轉至中央附近位置時，馬達停止轉動。
+    - 將可變電阻向左旋轉時，馬達以逆時針方向轉動，且旋轉角度越大，轉速越快。
+    - 將可變電阻向右旋轉時，馬達以順時針方向轉動，且旋轉角度越大，轉速越快。
+
+4. 實驗成果：成功利用可變電阻控制直流馬達之轉動方向與轉速。可變電阻中心位置對應馬達停止狀態，向兩側旋轉可分別控制順時針與逆時針運轉，且轉速隨旋轉角度增加而提高。
+
+5. 操作影片：請參閱同目錄下 video/Task2-1.mp4 之實際操作畫面。
